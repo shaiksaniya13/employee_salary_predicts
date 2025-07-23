@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Predictor</title>
+</head>
+<body style="text-align:center;">
+    <h2>Employee Salary Prediction</h2>
+    <form action="/predict" method="POST">
+        <label>Experience (Years):</label><br>
+        <input type="number" name="experience" required><br><br>
+
+        <label>Education:</label><br>
+        <select name="education">
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="MCA">MCA</option>
+        </select><br><br>
+
+        <label>Job Role:</label><br>
+        <select name="job_role">
+            <option value="Developer">Developer</option>
+            <option value="Analyst">Analyst</option>
+            <option value="Tester">Tester</option>
+            <option value="Manager">Manager</option>
+            <option value="HR">HR</option>
+        </select><br><br>
+
+        <label>Location:</label><br>
+        <select name="location">
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+        </select><br><br>
+
+        <button type="submit">Predict Salary</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
